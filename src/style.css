@@ -24,6 +24,29 @@ nav{
   align-items: center;
 }
 
+.btn-init{
+  width: 100%;
+  border-radius: 0px;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+background:linear-gradient(160deg,#2ca2b4,#5598de -139%,#7f87ff 30%,#f65aad 114%,#ec3d43);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5px);
+-webkit-backdrop-filter: blur(5px);
+border-bottom: none;
+
+}
+input:-internal-autofill-selected {
+  background-color: #242424;
+}
+.input-init{
+  width: 80%;
+  padding: 1rem;
+  background-color: white;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid white;
+  text-align: center;
+}
 .home-inner-text{
   display: flex;
   flex-direction: column;
@@ -57,7 +80,10 @@ h3
     background-color:#b672da;
   
   }
-  
+  .p-inner{
+    text-align: left;
+    margin-top: 2rem;
+  }
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -181,6 +207,7 @@ button {
   background: none;
   cursor: initial;
   font-size: 1.125rem;
+  border-bottom: 1px solid white;
 }
 section {
 	margin-top: 2rem;
@@ -201,12 +228,15 @@ section {
 	width: 100%;
 	font-size: 1.125rem;
 	padding: 1rem 1.5rem;
-	/* color: #313154;; */
-	/* background-color: #FFF; */
-	/* border-radius: 0.5rem; */
+
 	box-shadow: var(--shadow);
 	margin-bottom: 1.5rem;
   border-bottom: 2px solid white;
+  font-size: 1rem;
+}
+.bye{
+  text-decoration: underline;
+  border-bottom: none;
 }
 
 .create-todo input[type="submit"] {

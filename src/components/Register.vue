@@ -1,11 +1,11 @@
 <template>
   
       <div class="login">
-    <h3>Let´s create an account</h3>
+    <h3>Let´s create an account:</h3>
     <form @submit.prevent="Register">
-        <input type="text" placeholder="you@allislove.com" v-model="email"/>
-        <input type="password" placeholder="******" v-model="password"/>
-        <button @click="register">Go!</button>
+        <input class="input-init" type="text" placeholder="you@allislove.com" v-model="email"/>
+        <input class="input-init" type="password" placeholder="******" v-model="password"/>
+        <button @click="register" class="btn-init" > <strong> Good to Go! </strong></button>
        
     </form>
    </div>
@@ -27,7 +27,7 @@ const register = () => {
   })
   .catch((error) => {
     console.log(error.code);
-    alert(error.message);
+ 
   })
 
 };

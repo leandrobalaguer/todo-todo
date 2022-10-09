@@ -1,4 +1,5 @@
 <template>
+ <img src="../assets/website-state-feedback.png">
     <inner-texts />
     <register />
     

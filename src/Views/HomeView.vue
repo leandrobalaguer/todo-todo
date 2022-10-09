@@ -3,10 +3,11 @@
 
 <div class="inner-content">
     <div class="home-inner-text">
-    <h1 class="title">What´s up today?</h1>
+    <h1 class="title">What´s up 
+         <span class="is--home-beautiful">today?</span></h1>
     <h3>Hey! So good to see you again.</h3>
         <p> What´s on your marvellous mind?
-            Are you up for a new task? or is it an Action? Maybe a Story? You name it, Buddy. </p> 
+            Are you up for a new task? or is it an Action? Maybe a Story? You name it. </p> 
             <br>
         <h4> Everything is possible from this point :)</h4>
         </div>

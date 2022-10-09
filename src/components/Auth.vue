@@ -1,12 +1,12 @@
 <template>
       <div class="login">
-    <h3>Let´s Jump in!</h3>
-    <form @submit.prevent="Login">
-        <input type="text" placeholder="you@allislove.com" v-model="email"/>
-        <input type="password" placeholder="*********" v-model="password"/>
+    <h3>I´m in!</h3>
+    <form @submit.prevent="Login" >
+        <input class="input-init" type="text" placeholder="you@allislove.com" v-model="email"/>
+        <input class="input-init" type="password" placeholder="*********" v-model="password"/>
         <p v-if="errMsg">{{ errMsg }}</p>
-        <button @click="register">Let´s Go!</button>
-       <p>New  <router-link to="/register">in town?</router-link></p>
+        <button @click="register" class="btn-init"><strong> Let´s Go! </strong></button>
+       <p>New  <router-link to="/register">in town?</router-link>👽</p>
     </form>
    </div>
 </template>
@@ -30,16 +30,16 @@ const register = () => {
     console.log(error.code);
     switch(error.code){
         case "auth/invalid-email":
-            errMsg.value = "Invalid Email";
+            errMsg.value = "Oh, c´mon give me something 😐";
             break;
             case "auth/user-not-found":
-                errMsg.value ="Mm, hae we meet?";
+                errMsg.value ="Mm, have we meet?😳";
                 break;
             case "auth/wrong-password":
-                errMsg.value = "Mm, sure about the password?";
+                errMsg.value = "Mm, sure about the password?🫣";
                 break;
             default:
-                errMsg.value = "Mm, something went wrong :/";
+                errMsg.value = "Mm, something went wrong 🫠";
                 break;
     }
   });
