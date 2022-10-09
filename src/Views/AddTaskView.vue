@@ -2,6 +2,7 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
 import { ref, onMounted, computed, watch } from "vue";
+import NavBar from "../components/NavBar.vue"
 
 const todos = ref([]);
 const name = ref("");
@@ -48,8 +49,9 @@ onMounted(() => {
 </script>
 
 <template>
+<nav-bar />
   <main class="app">
-    <img src="../assets/website-state-feedback.png">
+   
     <section class="greetings">
       <h1 class="title">
         Hello 
