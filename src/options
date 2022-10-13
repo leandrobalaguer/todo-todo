@@ -1,0 +1,24 @@
+    <div class="options">
+
+      <label>
+         
+        <input type="radio" 
+        name="category" 
+        id="category1"
+        value="business"
+        v-model="input_category" />
+       
+       <div>business</div>
+      </label>
+
+      <label>
+  
+        <input type="radio" 
+        name="category" 
+        id="category2"
+        value="personal"
+        v-model="input_category" />
+        
+           <div>personal</div>
+      </label>
+    </div>

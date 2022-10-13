@@ -1,5 +1,5 @@
 <template>
- <img src="../assets/website-state-feedback.png">
+ <img src="../assets/website-state-feedback.png" class="img-wellcome-a">
     <inner-texts />
     <auth />
    

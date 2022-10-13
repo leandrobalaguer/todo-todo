@@ -1,6 +1,7 @@
 <template>
+<div class="desktop">
       <div class="login">
-    <h3>I´m in!</h3>
+    <h3 class="hidden">I´m in!</h3>
     <form @submit.prevent="Login" >
         <input class="input-init" type="text" placeholder="you@allislove.com" v-model="email"/>
         <input class="input-init" type="password" placeholder="*********" v-model="password"/>
@@ -8,6 +9,7 @@
         <button @click="register" class="btn-init"><strong> Let´s Go! </strong></button>
        <p>New  <router-link to="/register">in town?</router-link>👽</p>
     </form>
+   </div>
    </div>
 </template>
 

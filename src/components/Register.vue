@@ -1,13 +1,13 @@
 <template>
-  
+  <div class="desktop i">
       <div class="login">
     <h3>Let´s create an account:</h3>
     <form @submit.prevent="Register">
         <input class="input-init" type="text" placeholder="you@allislove.com" v-model="email"/>
         <input class="input-init" type="password" placeholder="******" v-model="password"/>
         <button @click="register" class="btn-init" > <strong> Good to Go! </strong></button>
-       
     </form>
+    </div>
    </div>
 </template>
 

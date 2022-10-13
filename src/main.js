@@ -4,6 +4,7 @@ import router from './router'
 import { initializeApp } from "firebase/app";
 
 import { getAuth } from "firebase/auth"
+import Draggable from 'vuedraggable'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -20,8 +21,9 @@ const firebaseConfig = {
 // Initialize Firebase
 initializeApp(firebaseConfig);
 
+
+
 import './style.css'
 
- 
 createApp(App).use(router).mount('#app')
 

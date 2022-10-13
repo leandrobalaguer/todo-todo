@@ -31,9 +31,9 @@ onMounted(() => {
   });
 });
 
-const handleSignOut = () =>{
+const handleSignOut = () => {
   signOut(auth).then(()=>{
-   router.value("/seeya");
+   router.value("/");
   });
 
 };
