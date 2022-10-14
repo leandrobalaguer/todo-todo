@@ -246,7 +246,7 @@ button:focus-visible {
 }
 
 #app {
-  max-width: 1280px;
+  max-width: 1612px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -448,9 +448,10 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
   .desktop-todo{
     position: absolute;
-    right: 1%;
-    width: 49%;
+    right: 2%;
+    width: 41%;
     top: 12%;
+
 
   }
 
@@ -474,7 +475,7 @@ h1,
   font-size: 15rem;
   color: white;
   padding-left: 40rem;
-  
+  font-weight: 800;
   padding-top: 43%;
 }
 html, body {
@@ -542,6 +543,6 @@ a{
     padding: 0px;
 }
 input[type="checkbox" i]{
-  filter: invert(100%) hue-rotate(234deg) brightness(1.5);
+  /* filter: invert(80%) hue-rotate(234deg) brightness(1.5); */
 }
 }

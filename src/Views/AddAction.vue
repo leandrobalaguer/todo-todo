@@ -1,9 +1,10 @@
 <template>
 <nav-bar />
     <main class="app">
-        <section class="greetings">
-    <h1 class="title">Let´s do
-        <span class="is--home-beautiful">this!</span>
+        <section class="greetings-actions">
+    <h1 class="title-todo">Let´s
+        <br> do this!
+        
     </h1>
     <p class="p-inner">Actions bring us closer to what we want. It is one step further,
         a clearer one. So, tell me more...

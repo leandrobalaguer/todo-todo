@@ -1,13 +1,13 @@
  <template>
-    <nav>
+   <nav>
  
     <router-link to="/task"> Task </router-link>
     <router-link to="/action"> Action </router-link>
     <router-link to="/story"> Story </router-link>
-        <button @click="handleSignOut" v-if="isLoggedIn" class="bye">Bye!</button>
+      <button @click="handleSignOut" v-if="isLoggedIn" class="bye">Bye!</button>
 
     </nav>
-   
+
  </template>
  <script setup>
 import { onMounted, ref } from "vue";

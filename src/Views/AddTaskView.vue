@@ -6,8 +6,8 @@
       
     <section class="greetings">
       <h1 class="title-todo">
-        Hello 
-       <span class="is--home-beautiful">there!</span>
+        Hi 
+       <span >there!</span>
       </h1>
     </section>
 
@@ -19,7 +19,7 @@
       placeholder="What´s on your mind Buddy?" 
       v-model="input_content" class="todo-item" />
     
-     <input type="submit" value="Let´s do this!" />
+     <input type="submit" value="Hit it!" />
     </form>
     </section>
   
