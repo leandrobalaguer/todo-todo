@@ -1,5 +1,6 @@
 <template>
 <div class="inner-content">
+
     <div class="wellcome-init">
     <h1 class="title">Welcome!</h1>
     <p class="welcome-text">This is <strong>todo-todo</strong>,

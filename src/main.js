@@ -1,10 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "firebase/app"
+import { getFirestore } from "firebase/firestore";
+import { createPinia } from 'pinia'
+
 
 import { getAuth } from "firebase/auth"
-import Draggable from 'vuedraggable'
+
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -19,11 +22,20 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+
+const db = getFirestore(app);
+
+export {
+  db
+}
 
 
+
+
+const pinia = createPinia();
 
 import './style.css'
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).use(pinia).mount('#app')
 

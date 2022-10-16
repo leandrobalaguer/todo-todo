@@ -1,12 +1,11 @@
 import { defineStore } from "pinia";
 
-
-export const useTodosTitle = defineStore ("TodosTitle",{
-state: () =>{
-    return{
-         todos,
-
-    }
-}
+export const useTodos = defineStore('todos', {
+    state: () => ({
+    todos_asc :([]),
+    name :(""),
+    input_content: ("")
+      
+    })
 
 })

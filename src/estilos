@@ -9,3 +9,39 @@ background-color: #D9AFD9;
     background-color: rgba(255, 255, 255, .3);
     padding: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.3);
+
+
+    <h3>Hey! So good to see you again.</h3>
+        <p> What´s on your marvellous mind?
+            Are you up for a new task? or is it an Action? Maybe a Story? You name it. </p> 
+            <br>
+        <h4> Everything is possible from this point :)</h4>
+
+        <!-- <p>0000 000 000 0000</p> -->
+            <!-- <span>VALID</span> <span>01/28</span> -->
+
+            <div class="home-options">
+                <router-link to="/task"> <button class="home-task">task</button></router-link>
+                <router-link to="/action"> <button class="home-action">action</button></router-link>
+                <router-link to="/story"> <button class="home-story">story</button></router-link>
+                
+                        
+                    
+                    </div>
+
+                    color: #1d1d1f;
+    background: -webkit-gradient(linear, left top, right top, from(#FF825B), to(#E85CBA));
+    background: -webkit-linear-gradient(left, #FF825B 0%, #E85CBA 100%);
+    background: linear-gradient(to right, #FF825B 0%, #E85CBA 100%);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out;
+    transition: transform .8s ease-in-out, -webkit-transform .8s ease-in-out;
+}
+
+background-color: rgba(29,29,31,0.72);
+-webkit-backdrop-filter: saturate(180%) blur(20px);
+backdrop-filter: saturate(180%) blur(20px);
+background-color: rgba(255,255,255,0.72);

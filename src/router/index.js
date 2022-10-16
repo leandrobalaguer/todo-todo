@@ -29,6 +29,14 @@ const routes = [
         }
       },
       {
+        path: '/todo', 
+        name: 'todo',
+        component: () => import('../Views/AddTodo.vue'),
+        meta:{
+          requiresAuth : true
+        }
+      },
+      {
         path: '/action', 
         name: 'action',
         component: () => import('../Views/AddAction.vue'),

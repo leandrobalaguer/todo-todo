@@ -2,15 +2,12 @@
 <template>
 <nav-bar />
   <main class="app">
-
-      
     <section class="greetings">
       <h1 class="title-todo">
         Hi 
        <span >there!</span>
       </h1>
     </section>
-
     <section class="create-todo">
       <!-- <h3>Let´s start something!</h3> -->
       <form @submit.prevent="addTodo">
@@ -45,10 +42,8 @@
 <script setup>
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import { ref, onMounted, computed, watch, provide } from "vue";
+import { ref, onMounted, computed, watch } from "vue";
 import NavBar from "../components/NavBar.vue";
-
-
 
 const todos = ref([]);
 const name = ref("");
@@ -71,7 +66,6 @@ const addTodo = () =>{
     createdAt: new Date().getTime()
   })
   input_content.value = ""
-
 }
 
 const removeTodo = todo =>{
@@ -92,5 +86,4 @@ onMounted(() => {
 });
 
 
-provide( "message", todos);
 </script>
