@@ -389,7 +389,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .todo-item .actions .edit {
 	margin-right: 0.5rem;
-	background-color: var(--primary);
+
 }
 
 .todo-item .actions .delete {
@@ -400,7 +400,7 @@ border: 1px solid rgba(255, 255, 255, 0.3);
 
 .todo-item.done .todo-content input {
 	text-decoration: line-through;
-	color: var(--grey);
+
   width: 100%;
 
 }

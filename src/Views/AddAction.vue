@@ -5,7 +5,7 @@
 
     <div class="desktop-actions">
     <h1 class="title-todo"><span class="title-action">Let´s
-          {{ useTodo.name }}
+     {{ todos.id }}
         </span> 
         <br>Do it!
         
@@ -23,12 +23,16 @@
 
         <ul class="new-note">
             <div class="new-note-title" >
-                
+          
             </div>
              <div class="new-note-dummi" ></div>
             <li v-for="(note, index) in noteList" :key="note.note + index">
                
                 {{ note.note }}
+
+               
+                
+
             </li>
         </ul>
 
@@ -46,7 +50,9 @@ import NavBar from "../components/NavBar.vue"
 import  { useTodos } from "../store/TodoStore"
 import { ref } from "vue"
 
-const useTodo = useTodos()
+
+const todos = useTodos()
+
 
 
 
@@ -63,7 +69,7 @@ const addNote = () => {
 
 </script>
 <style scoped>
-/* From uiverse.io by @G4b413l */
+
 .group {
  position: relative;
 }

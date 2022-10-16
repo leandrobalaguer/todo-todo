@@ -6,6 +6,8 @@
       <h1 class="title-todo">
         Hi 
        <span >there!</span>
+
+ 
       </h1>
     </section>
     <section class="create-todo">
@@ -23,37 +25,55 @@
   
         <div class="desktop-todo">
 <section class="todo-list">
+
+
   <div class="list">
-    <div v-for="todo in todos" :class="`todo-item ${toggleDone(todo.id) && 'done'}`" :key="todo.id">
+
+    <div v-for="todo in todos" 
+    :class="`todo-item ${todo.done && 'done'}`" 
+    :key="todo.id"
+    :list="todos"
+    draggable="true">
+    
       <label>
-        <input type="checkbox" v-model="toggleDone(todo.id)" @click=""/>
+        <input type="checkbox" v-model="todo.done" @change="toggleDone(todo.id)"/>
       </label>
       <div class="todo-content">
+        
         <input type="text" v-model="todo.content" message="todo.content" />
       </div>
       <div class="actions">
         <button class="delete" @click="deleteTodo(todo.id)">X</button>
       </div>
     </div>
+
   </div>
+
 </section>
   </div>
   </main>
 </template>
 <script setup>
+
 import NavBar from "../components/NavBar.vue"
 import { onMounted, ref } from "vue"
 import { db } from "../main" 
-import { collection, query, where, onSnapshot, addDoc, deleteDoc, doc, updateDoc } from "firebase/firestore";
+import { collection, query, 
+onSnapshot, addDoc, 
+deleteDoc, doc, 
+updateDoc, orderBy, limit } from "firebase/firestore";
+import { useTodos } from "../store/TodoStore";
 
-const todoColeRef = collection(db, "todos");
+const todoColeRef = collection(db, "todos")
+const todoColeQuery = query(todoColeRef, orderBy("date", "desc"))
+
 const todos = ref([
     {
      
-    }
+    } 
 ])
 onMounted (()=>{
-onSnapshot(todoColeRef,(querySnapshot) => {
+onSnapshot(todoColeQuery ,(querySnapshot) => {
   const fbTodos  = []
   querySnapshot.forEach((doc) => {
       const todo = {
@@ -66,24 +86,20 @@ onSnapshot(todoColeRef,(querySnapshot) => {
     todos.value = fbTodos
 })
 })
+console.log(todos);
 
 const newTodoContent = ref("")
+
 const addTodo = () => {
  if(newTodoContent.value.trim() === "" ){
     return
   }
     addDoc(todoColeRef , {
   content: newTodoContent.value,
-  done: false
+  done: false,
+  date: Date.now()
 })
 
-//     const newTodo = {
-//         id: "id1",
-//         content: newTodoContent.value,
-//         done: false
-//     }
-    
-//    todos.value.unshift(newTodo)
    newTodoContent.value=""
 };
 
@@ -91,14 +107,21 @@ const deleteTodo = id =>{
  deleteDoc(doc(todoColeRef, id));
 } 
 
+// const toggleDone = () =>{
+//     if (event.target.checked) console.log("Check")
+//     else console.log( "unc")
+// }
+
 const toggleDone = id => {
     const index = todos.value.findIndex(todo => todo.id === id)
+    console.log(todos.value[index].done)
+    updateDoc(doc(todoColeRef, id), {
+  done: !todos.value[index].done 
+})
+};
 
-// Set the "capital" field of the city 'DC'
-updateDoc( (todoColeRef, id), {
-done: !todos.value[index].done
 
-});
-} 
+
+
 
 </script>
