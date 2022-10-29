@@ -1,15 +1,17 @@
 <template>
+<div id="main">
     <inner-texts />
 <div class="desktop">
       <div class="login">
     <h3 class="hidden">I´m in!</h3>
     <form @submit.prevent="Login" class="login_desktop">
-        <input class="input-init" type="text" placeholder="it´ssogoodto@seeyoouagain.com" v-model="email"/>
-        <input class="input-init" type="current-password" placeholder="*********" v-model="password"/>
+        <input class="input-init" type="text" placeholder="you@areloved.com" v-model="email"/>
+        <input class="input-init" type="password" placeholder="******" v-model="password"/>
         <p v-if="errMsg">{{ errMsg }}</p>
         <button @click="register" class="btn-init"><strong> Login! </strong></button>
-       <p> New  <router-link to="/register">in town?</router-link>👽</p>
+       <p class="register-go"> New  <router-link to="/register">in town?</router-link>👽</p>
     </form>
+   </div>
    </div>
    </div>
 </template>
@@ -28,7 +30,7 @@ const register = () => {
   signInWithEmailAndPassword(getAuth(), email.value, password.value)
   .then((data) =>{
     console.log("YEY");
-    router.push('/home')
+    router.push('/todo')
   })
   .catch((error) => {
     console.log(error.code);
@@ -51,3 +53,8 @@ const register = () => {
 };
 
 </script>
+
+<style scoped>
+
+ 
+</style>

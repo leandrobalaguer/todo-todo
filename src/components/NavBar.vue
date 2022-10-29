@@ -1,11 +1,8 @@
  <template>
    <nav>
-  <!-- <img src="../assets/website-state-feedback.png"> -->
-    <router-link to="/todo"> NewTodo </router-link>
-    <router-link to="/task"> Task </router-link>
-    <router-link to="/action"> Action </router-link>
-    <router-link to="/story"> Story </router-link>
-    <i class="fa-solid fa-arrow-right-to-bracket" @click="handleSignOut" v-if="isLoggedIn"></i>
+ 
+
+    <router-link to="/"><i class="fa-solid fa-arrow-right-to-bracket" @click="handleSignOut" v-if="isLoggedIn"></i></router-link>
       <!-- <button @click="handleSignOut" v-if="isLoggedIn" class="bye">Bye!</button> -->
 
     </nav>
@@ -35,7 +32,7 @@ onMounted(() => {
 
 const handleSignOut = () => {
   signOut(auth).then(()=>{
-   router.value("/");
+  router.push('/')
   });
 
 };
@@ -43,5 +40,8 @@ const handleSignOut = () => {
 <style scoped>
 .fa-solid{
   cursor: pointer;
+  font-size: 2rem;
+      color: white;
+    margin-bottom: 4rem;
 }
 </style>

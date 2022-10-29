@@ -2,61 +2,31 @@ import { createRouter, createWebHistory } from "vue-router";
 import { getAuth, onAuthStateChanged } from "firebase/auth"
 
 const routes = [
+  {
+    path: '/',
+    name: 'home',
+    component: () => import('../Views/Home.vue'),
+  },
     {
-      path: '/',
+      path: '/wellcome',
       name: 'wellcome',
       component: () => import('../Views/WellcomeView.vue'),
-    },
-    {
-      path: '/home', 
-      name: 'home',
-      component: () => import('../Views/HomeView.vue'),
-      meta:{
-        requiresAuth : true
-      }
     },
     {
       path: '/register', 
       name: 'register',
       component: () => import('../Views/WellcomeViewRegister.vue'),
     },
-    {
-        path: '/task', 
-        name: 'task',
-        component: () => import('../Views/AddTaskView.vue'),
-        meta:{
-          requiresAuth : true
-        }
-      },
       {
         path: '/todo', 
         name: 'todo',
-        component: () => import('../Views/AddTodo.vue'),
+        component: () => import('../Views/TodoApp.vue'),
         meta:{
           requiresAuth : true
         }
       },
-      {
-        path: '/action', 
-        name: 'action',
-        component: () => import('../Views/AddAction.vue'),
-        meta:{
-          requiresAuth : true
-        }
-      },
-      {
-        path: '/story', 
-        name: 'story',
-        component: () => import('../Views/AddStory.vue'),
-        meta:{
-          requiresAuth : true
-        }
-      },
-      {
-        path: '/seeya',
-        name: 'seeya',
-        component: () => import('../Views/SeeYa.vue'),
-      },
+ 
+  
   ];
   
   const router = createRouter({

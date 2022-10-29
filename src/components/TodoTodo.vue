@@ -1,11 +1,12 @@
 
 <template>
+<div id="main">
 <nav-bar />
   <main class="app">
     <section class="greetings">
       <h1 class="title-todo">
         Hi 
-       <span >there!</span>
+       <span class="is--home-beautiful" >there!</span>
 
  
       </h1>
@@ -23,7 +24,7 @@
     </form>
     </section>
   
-        <div class="desktop-todo">
+<div class="desktop-todo">
 <section class="todo-list">
 
 
@@ -33,7 +34,7 @@
     :class="`todo-item ${todo.done && 'done'}`" 
     :key="todo.id"
     :list="todos"
-    draggable="true">
+   >
     
       <label>
         <input type="checkbox" v-model="todo.done" @change="toggleDone(todo.id)"/>
@@ -52,17 +53,18 @@
 </section>
   </div>
   </main>
+  </div>
 </template>
 <script setup>
 
-import NavBar from "../components/NavBar.vue"
+import NavBar from "./NavBar.vue"
 import { onMounted, ref } from "vue"
 import { db } from "../main" 
 import { collection, query, 
 onSnapshot, addDoc, 
 deleteDoc, doc, 
 updateDoc, orderBy, limit } from "firebase/firestore";
-import { useTodos } from "../store/TodoStore";
+
 
 const todoColeRef = collection(db, "todos")
 const todoColeQuery = query(todoColeRef, orderBy("date", "desc"))
@@ -86,7 +88,7 @@ onSnapshot(todoColeQuery ,(querySnapshot) => {
     todos.value = fbTodos
 })
 })
-console.log(todos);
+
 
 const newTodoContent = ref("")
 
@@ -119,9 +121,5 @@ const toggleDone = id => {
   done: !todos.value[index].done 
 })
 };
-
-
-
-
 
 </script>
