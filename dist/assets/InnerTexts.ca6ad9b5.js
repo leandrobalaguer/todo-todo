@@ -1,0 +1,1 @@
+import{_ as t,o,c as s,e}from"./index.fd86b0e4.js";const c={},n={class:"inner-content"},a=e("div",{class:"wellcome-init"},[e("h1",{class:"title"}," Welcome!"),e("p",{class:"welcome-text"},"Catch your ideas on the go. Make them grow, turn it into something meaningfull."),e("br")],-1),r=[a];function i(_,l){return o(),s("div",n,r)}const d=t(c,[["render",i]]);export{d as I};
