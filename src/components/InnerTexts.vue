@@ -1,5 +1,5 @@
 <template>
-<div class="inner-content">
+<div class="comodo" >
 
     <div class="wellcome-init">
     <h1 class="title"> Welcome!</h1>

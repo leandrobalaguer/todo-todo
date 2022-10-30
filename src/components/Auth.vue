@@ -1,9 +1,14 @@
 <template>
 <div id="main">
-    <inner-texts />
+<div class="comodo">
+<div class="wellcome-init">
+<h1 class="title"> Welcome!</h1>
+<p class="welcome-text">Catch your ideas on the go. Make them grow, turn it into something meaningfull.</p>
+   <br>
+</div>
+</div>
 <div class="desktop">
       <div class="login">
-    <h3 class="hidden">I´m in!</h3>
     <form @submit.prevent="Login" class="login_desktop">
         <input class="input-init" type="text" placeholder="you@areloved.com" v-model="email"/>
         <input class="input-init" type="password" placeholder="******" v-model="password"/>
@@ -17,7 +22,6 @@
 </template>
 
 <script setup>
- import InnerTexts from "../components/InnerTexts.vue"
 import { ref } from "vue";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { useRouter } from "vue-router"

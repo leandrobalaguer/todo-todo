@@ -1,6 +1,6 @@
 <template>
 <div class="nav-home">
- <router-link to="/wellcome" class="square_btn">Login</router-link>
+ <router-link to="/wellcome" class="square_btn">login</router-link>
  <router-link to="/register" class="square_btn"><button class="home-btn-reg">register</button></router-link>
  </div>
 </template>
@@ -11,7 +11,7 @@
 
 <style scoped>
 .nav-home{
-        font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+        font-family: "SF Pro Text", Helvetica Neue,Helvetica,Arial,sans-serif;
         display: flex;
         justify-content: flex-end;
         margin-bottom: 2rem;
@@ -42,5 +42,21 @@
         background: #e160bf;
         text-shadow: 0 2px 4px rgb(0 0 0 / 25%);
 }
- 
+
+@media only screen and  (min-width: 410px){
+  .nav-home{
+    padding-top: 3rem;
+  }
+}
+  @media only screen and (min-width: 810px){
+    .nav-home{
+              padding-top: 2rem;
+        justify-content: center;
+}
+  }
+  @media only screen and  (min-width: 1200px){
+    .nav-home{
+  justify-content: flex-end;
+}
+  }
 </style>
