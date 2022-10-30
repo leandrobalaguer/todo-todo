@@ -54,7 +54,12 @@
           </div>
           <div class="sep"></div>
            <div class="store">
-            <div class="emoji"></div>
+            <div class="emoji">
+              <a href="">
+              <img src="../assets/emiji.png" alt="">
+              <img src="../assets/emiji-hover.png" alt="">
+              </a>
+            </div>
           </div>
         </div>
     </div>
@@ -276,6 +281,9 @@ font-size: 1.2rem;
 .ce-2{
   display: none;
 }
+.block4{
+  background: -webkit-linear-gradient(38deg,#a979e3 20%,#ef5db2 50%,#ff58c6 80%);
+}
    }
 
 @media only screen and  (min-width: 810px){
@@ -296,6 +304,7 @@ padding-top: 9rem;
 .block4{
 height: 800px;
 padding-bottom: 12rem;
+background: -webkit-linear-gradient(38deg,#a979e3 20%,#ef5db2 50%,#ff58c6 80%);
 }
 .nav-home a{
 margin-right: 0px;
@@ -361,6 +370,7 @@ padding-top: 6rem;
 .block4{
   height: 600px;
   padding: 0;
+  background: -webkit-linear-gradient(38deg,#a979e3 20%,#ef5db2 50%,#ff58c6 80%);
 }
 .cta{
   padding: 0;
@@ -459,5 +469,15 @@ font-family:"SF Pro Text", Helvetica Neue,Helvetica,Arial,sans-serif;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+a img:last-child {
+  display: none;  
+}
+a:hover img:last-child {
+  display: block;  
+}
+a:hover img:first-child {
+  display: none;  
+}
+
   }
 </style>
